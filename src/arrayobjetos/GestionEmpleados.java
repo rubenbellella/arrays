@@ -1,7 +1,7 @@
 package arrayobjetos;
 
 import java.util.Scanner;
-
+//Clase GestionEmpleados
 public class GestionEmpleados {
     public static void main(String[] args) {
         // Verifica si se pasaron nombres como argumentos
@@ -21,11 +21,13 @@ public class GestionEmpleados {
     }
 
     static void gestionEmpleados() {
+        //Creamos el scanner
         Scanner scanner = new Scanner(System.in);
 
         // Declara un array de 5 objetos Empleado inicializado a null
         Empleado[] empleados = new Empleado[5];
 
+        //Atributo opcion 
         int opcion;
         do {
             // Muestra el menú
@@ -53,7 +55,7 @@ public class GestionEmpleados {
             }
         } while (opcion != 3);
 
-        scanner.close();
+        scanner.close(); //Cerramos el scanner
     }
 
     static void altaEmpleado(Empleado[] empleados) {
@@ -61,6 +63,7 @@ public class GestionEmpleados {
 
         for (int i = 0; i < empleados.length; i++) {
             // Verifica si la posición está vacía (null)
+            //Pedir los datos del empleado
             if (empleados[i] == null) {
                 System.out.println("Introduce los datos del empleado:");
                 System.out.print("DNI: ");
@@ -86,6 +89,7 @@ public class GestionEmpleados {
 
     static void consultaEmpleados(Empleado[] empleados) {
         // Recorre el array de empleados con un bucle foreach
+        //Mostrar los datos del empleado
         System.out.println("Datos de los empleados:");
         for (Empleado empleado : empleados) {
             if (empleado != null) {
